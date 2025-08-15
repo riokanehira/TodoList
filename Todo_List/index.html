@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TodoList</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="todolist.js" defer></script>
 </head>
 <body>
-    <div class="header"></div>
+    <header>
+        <div class="copy-container">Todo</div>
+
+    </header>
     
     <div class="main">
-        <h3 class="copy-container">TodoList</h3>
-        <div class="todolist">
-            <ul>
-                <li></li>
-            </ul>
-        </div>
         
-        <div class="input-form">
-            <textarea id="todo-write"></textarea>
+        <div class="input-area">
+            <input id="todo-write"></input>
             <input id="todo-submit" type="submit" value="Add">
+            
+        </div>
+        <div class="todolist">
+            <ul id="task-list">
+                
+            </ul>
         </div>
     </div>
     

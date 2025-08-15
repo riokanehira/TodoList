@@ -1,7 +1,45 @@
-.input-form{
-    margin: 10px;
+body{
+    margin: 0;
+}
+
+/*ヘッダー*/
+header{
+    background-color: aquamarine;
+    height: 65px;
+    width: 100%;
+    
 
 }
-.todo-submit{
-    margin-left: 10px;
+.copy-container{
+    font-size: 20px;
+    padding: 20px;
+    
 }
+
+/*メイン*/
+/*.main{}*/
+
+.input-area{
+    /*text-align: center;*/
+    
+    height: 80px;
+    background-color: brown;
+
+
+}
+#todo-write{
+    margin: 20px;
+    padding: 10px;
+    width:50%
+}
+#todo-submit{
+    padding: 10px;
+}
+
+
+/*.btn{
+    padding: 8px 24px;
+    display: inline-block;
+    border-radius: 4px;
+
+}*/
