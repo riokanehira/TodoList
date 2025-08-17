@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoList</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="todolist.js" defer></script>
+    <!-- <script src="todolist.js" defer></script> -->
 </head>
 <body>
     <header>
@@ -17,16 +17,17 @@
     <div class="main">
         
         <div class="input-area">
-            <input id="todo-write"></input>
-            <input id="todo-submit" type="submit" value="Add">
+            <input id="todo-write">
+            <button id ="todo-submit">Add</button>
             
         </div>
         <div class="todolist">
+            <!--チェックボックス-->
             <ul id="task-list">
                 
             </ul>
         </div>
     </div>
-    
+    <script src="todolist.js"></script>
 </body>
 </html>

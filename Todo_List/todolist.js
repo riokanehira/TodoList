@@ -5,7 +5,7 @@
 const input = document.getElementById('todo-write');
 const addBtn = document.getElementById('todo-submit');
 const clearAllBtn = document.getElementById('clearAllBtn');
-const list = document.getElementById('taskList');
+const list = document.getElementById('task-list');
 
 // 追加ボタン
 addBtn.addEventListener('click', addTask);
@@ -45,6 +45,7 @@ function addTask() {
 
   input.value = '';
 }
+console.log(list); // nullじゃなければOK
 
 
 //Addボタンを押したらテキストボックス内の内容をliに追加
