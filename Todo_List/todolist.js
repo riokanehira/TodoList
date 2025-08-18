@@ -24,31 +24,32 @@ function addTask() {
   if (taskText === '') return;
 
   const li = document.createElement('li');
-  
+
+  // チェックボックス
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  li.classList.toggle('list');
+  checkbox.addEventListener('change', () => {
+    li.classList.toggle('completed', checkbox.checked);
+  });
+
   // タスク本文
   const span = document.createElement('span');
   span.textContent = taskText;
-  span.addEventListener('click', () => {
-    li.classList.toggle('completed'); // 完了済みトグル
-  });
 
   // 削除ボタン
   const delBtn = document.createElement('button');
-  delBtn.textContent = '削除';
+  delBtn.textContent = 'Delete';
+  delBtn.classList.toggle('delete')
   delBtn.addEventListener('click', () => {
     list.removeChild(li);
   });
 
+  // 要素をliに追加
+  li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(delBtn);
   list.appendChild(li);
 
   input.value = '';
 }
-console.log(list); // nullじゃなければOK
-
-
-//Addボタンを押したらテキストボックス内の内容をliに追加
-//チェックボタンを押したら色が薄くなる、線を引く
-//ばつボタンを押したら該当の項目を消す
-//リセットボタンを押したら全部消える

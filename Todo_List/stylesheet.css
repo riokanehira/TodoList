@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body{
     margin: 0;
 }
@@ -5,28 +9,37 @@ body{
 /*ヘッダー*/
 header{
     background-color: aquamarine;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 60px;
     height: 65px;
     width: 100%;
+
     
 
 }
 .copy-container{
     font-size: 20px;
-    padding: 20px;
+    padding: 0;
     
 }
 #clearAllBtn{
-    float:right;
+    
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /*メイン*/
 /*.main{}*/
 
 .input-area{
-    /*text-align: center;*/
-    
+    text-align: center;
     height: 80px;
-    background-color: brown;
+    
 
 
 }
@@ -39,6 +52,18 @@ header{
     padding: 10px;
 }
 
+.list{
+    list-style: none;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete{
+    float: left;
+}
 
 /*.btn{
     padding: 8px 24px;
