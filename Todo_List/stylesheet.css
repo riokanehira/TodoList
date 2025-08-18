@@ -96,8 +96,11 @@ header{
 }
 
 #task-list li button:hover {
-  background: rgba(0,0,0,0.05); /* ホバー時だけ薄く見せる */
-  color: #000;                  /* 文字は黒にして強調 */
+    color: #000;                  /* 文字は黒にして強調 */
+}
+#task-list li.checked button {
+    color: #ccc;                 /* 文字色さらに薄く */
+    background: transparent;     /* 背景も透明のまま */            /* 押せる感じを減らす */
 }
 
 .task{
@@ -107,8 +110,9 @@ header{
     width: 100%;
     max-width: 600px;          /* 任意の最大幅 */
     padding: 8px;
-  
     box-sizing: border-box;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
 }
 
 .list{
