@@ -51,6 +51,10 @@ header{
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* 上に薄い影をつけると見やすい */
      
 }
+.todo-list{
+    padding-top:10px;
+}
+
 #todo-write{
     border: none;
     border-bottom: 1px solid #ccc;
@@ -62,6 +66,7 @@ header{
 }
 #todo-submit{
     padding: 10px;
+    
 }
 
 #task-list{

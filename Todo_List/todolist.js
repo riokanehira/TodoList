@@ -7,6 +7,8 @@ const addBtn = document.getElementById('todo-submit');
 const clearAllBtn = document.getElementById('clearAllBtn');
 const list = document.getElementById('task-list');
 
+
+
 // 追加ボタン
 addBtn.addEventListener('click', addTask);
 // Enterキーでも追加
@@ -18,6 +20,8 @@ input.addEventListener('keypress', e => {
 clearAllBtn.addEventListener('click', () => {
   list.innerHTML = '';
 });
+
+
 
 function addTask() {
   const taskText = input.value.trim();
@@ -41,7 +45,7 @@ function addTask() {
 
   // 削除ボタン
   const delBtn = document.createElement('button');
-  delBtn.textContent = 'Delete';
+  delBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
   //delBtn.classList.toggle('task');
   delBtn.classList.add('delete');
   delBtn.addEventListener('click', () => {
