@@ -28,8 +28,8 @@ function addTask() {
   // チェックボックス
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
-  li.classList.toggle('task');
-  li.classList.toggle('list');
+  li.classList.add('task');
+  li.classList.add('list');
   checkbox.addEventListener('change', () => {
     li.classList.toggle('completed', checkbox.checked);
   });
@@ -37,13 +37,13 @@ function addTask() {
   // タスク本文
   const span = document.createElement('span');
   span.textContent = taskText;
-  span.classList.toggle('task');
+  span.classList.add('task');
 
   // 削除ボタン
   const delBtn = document.createElement('button');
   delBtn.textContent = 'Delete';
   //delBtn.classList.toggle('task');
-  delBtn.classList.toggle('delete');
+  delBtn.classList.add('delete');
   delBtn.addEventListener('click', () => {
     list.removeChild(li);
   });

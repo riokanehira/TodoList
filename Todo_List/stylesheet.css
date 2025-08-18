@@ -4,6 +4,7 @@
 
 body{
     margin: 0;
+    padding-bottom: 80px;
 }
 
 /*ヘッダー*/
@@ -15,6 +16,7 @@ header{
     padding: 0 60px;
     height: 65px;
     width: 100%;
+    position: fixed; top: 0;
 
     
 
@@ -39,9 +41,15 @@ header{
 .input-area{
     text-align: center;
     height: 80px;
-    
-
-
+    z-index: 10;
+    position: fixed;    /* 画面に固定 */
+    bottom: 0;          /* 画面の下から0pxに配置 */
+    left: 0;            /* 左端に合わせる */
+    width: 100%;        /* 横幅いっぱい */
+    background-color: white; /* 背景色を指定すると下の要素が透けない */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* 上に薄い影をつけると見やすい */
+     
 }
 #todo-write{
     margin: 20px;
