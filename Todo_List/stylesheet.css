@@ -138,3 +138,8 @@ header{
 #clearAllBtn:hover,#delete:hover {
   opacity: 0.6;           /* ホバー時だけ軽く反応 */
 }
+
+.sortable-ghost {
+  opacity: 0.5;
+  background-color: #f0f0f0;
+}
