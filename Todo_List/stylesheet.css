@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body{
@@ -22,7 +22,7 @@ header{
 
 }
 .copy-container{
-    font-size: 20px;
+    font-size: 25px;
     padding: 0;
     
 }
@@ -52,9 +52,13 @@ header{
      
 }
 #todo-write{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
     margin: 20px;
     padding: 10px;
     width:50%
+
 }
 #todo-submit{
     padding: 10px;
@@ -62,31 +66,44 @@ header{
 
 #task-list{
     display: flex;
-  flex-direction: column;
-  align-items: center; /* 中央揃え */
-  padding: 0;
-  margin: 0 auto;
+    flex-direction: column;
+    align-items: center; /* 中央揃え */
+    padding: 0;
+    margin: 0 auto;
+}
+
+#task-list li span {
+    flex: 1;                  /* 残りのスペースを使う */
+  
+    word-break: break-all;    /* 長い単語も折り返す */
+}
+
+#task-list li button {
+    width: 80px;
+    background: transparent;  /* 背景を透明に */
+    border: none;             /* 枠線を消す */
+    color: #888;              /* テキストの色をグレーに */
+    font-size: 0.9em;         /* 少し小さめに */
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#task-list li button:hover {
+  background: rgba(0,0,0,0.05); /* ホバー時だけ薄く見せる */
+  color: #000;                  /* 文字は黒にして強調 */
 }
 
 .task{
     display: flex;
-  align-items: center;       /* 縦方向中央揃え */
-  justify-content: space-between; /* 余白を自動調整 */
-  width: 100%;
-  max-width: 600px;          /* 任意の最大幅 */
-  padding: 8px;
+    align-items: center;       /* 縦方向中央揃え */
+    justify-content: space-between; /* 余白を自動調整 */
+    width: 100%;
+    max-width: 600px;          /* 任意の最大幅 */
+    padding: 8px;
   
-  box-sizing: border-box;
-}
-
-.task-list li span {
-  flex: 1;                  /* 残りのスペースを使う */
-  
-  word-break: break-all;    /* 長い単語も折り返す */
-}
-
-.task-list li button {
-  width: 80px;
+    box-sizing: border-box;
 }
 
 .list{
@@ -99,12 +116,16 @@ header{
   color: #888;
 }
 
+#todo-submit, #clearAllBtn,#delete {
+  background: none;       /* 背景色をなくす */
+  border: none;           /* 枠線をなくす */
+  color: inherit;         /* 周囲の文字色に合わせる */
+  font: inherit;          /* 周囲のフォントに合わせる */
+  padding: 4px 8px;       /* クリックしやすさは確保 */
+  cursor: pointer;        /* クリックできることだけ示す */
+}
 
-
-
-/*.btn{
-    padding: 8px 24px;
-    display: inline-block;
-    border-radius: 4px;
-
-}*/
+#todo-submit:hover,
+#clearAllBtn:hover,#delete:hover {
+  opacity: 0.6;           /* ホバー時だけ軽く反応 */
+}
